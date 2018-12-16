@@ -2,8 +2,9 @@ FIRMWARE_TXT = cores/firmware/firmware.txt
 FIRMWARE_BIN = build/firmware.bin
 FIRMWARE_ELF = build/riscv32imc-unknown-none-elf/release/picorv32-example
 
-PROJ = de2-115-picorv32
-SOF = build/$(PROJ)/bld-quartus/$(PROJ).sof
+SYSTEM ?= de2-115-picorv32
+#SYSTEM ?= ice40-picorv32-soc
+SOF = build/$(SYSTEM)/bld-quartus/$(SYSTEM).sof
 
 all: $(SOF)
 
@@ -21,12 +22,12 @@ sof: $(SOF)
 
 .PHONY: $(SOF)
 $(SOF): $(FIRMWARE_TXT)
-	fusesoc --cores-root cores build $(PROJ)
-	@cat build/$(PROJ)/bld-quartus/$(PROJ).fit.summary
+	fusesoc --cores-root cores build $(SYSTEM)
+	@cat build/$(SYSTEM)/bld-quartus/$(SYSTEM).fit.summary
 
 .PHONY: program
 program:
-	fusesoc --cores-root cores pgm $(PROJ)
+	fusesoc --cores-root cores pgm $(SYSTEM)
 
 .PHONY: clean
 clean:
