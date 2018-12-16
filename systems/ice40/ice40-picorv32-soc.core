@@ -1,0 +1,13 @@
+CAPI=1
+
+[main]
+name = ice40-picorv32-soc
+description = Example picorv32 core for iCE40HX8K-EVB Board
+
+depend =
+    picorv32-soc
+
+[verilog]
+src_files =
+  rtl/verilog/top.v
+  rtl/verilog/aux.v

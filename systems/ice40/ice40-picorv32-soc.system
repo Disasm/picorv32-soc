@@ -1,0 +1,13 @@
+SAPI=1
+
+[main]
+name = ice40-picorv32-soc
+description = Example picorv32 system for iCE40HX8K-EVB Board
+backend = icestorm
+
+[icestorm]
+arachne_pnr_options = -d 8k
+pcf_file = data/ice40hx8k-evb.pcf
+top_module = top
+
+[pgm]

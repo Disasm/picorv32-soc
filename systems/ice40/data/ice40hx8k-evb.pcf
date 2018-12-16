@@ -1,0 +1,12 @@
+# Pinout for the iCE40HX8K-EVB Board
+
+set_io SYSCLK J3
+
+set_io LED1 M12
+set_io LED2 R16
+
+set_io BUT1 K11
+set_io BUT2 P13
+
+set_io PGM_RX L11
+set_io PGM_TX T16
