@@ -1,0 +1,14 @@
+SAPI=1
+[main]
+name = de2-115-picorv32
+description = Example picorv32 system for DE2-115 Board
+
+backend = quartus
+
+[quartus]
+family = "Cyclone IV E"
+device = EP4CE115F29C7
+sdc_files = data/de2-115.sdc
+tcl_files = data/pinmap.tcl
+            data/options.tcl
+top_module = top

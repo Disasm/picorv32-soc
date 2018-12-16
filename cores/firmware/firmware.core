@@ -1,0 +1,6 @@
+CAPI=1
+[main]
+
+[verilog]
+include_files =
+  firmware.txt

@@ -1,0 +1,14 @@
+CAPI=1
+
+[main]
+name = de2-115-picorv32
+description = Example picorv32 core for DE2-115 Board
+
+depend =
+    picorv32-soc
+
+[verilog]
+src_files =
+    rtl/verilog/aux.v
+    backend/rtl/verilog/pll_cpu.v
+    rtl/verilog/top.v
